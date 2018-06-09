@@ -7,6 +7,7 @@ import android.test.suitebuilder.annotation.LargeTest;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.widget.TextView;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
@@ -41,7 +42,39 @@ public class UITest {
         onView(withId(R.id.passwordInput)).perform(click());
         onView(withId(R.id.passwordInput)).perform(typeText(passes1));
         onView(withId(R.id.submitButton)).perform((click()));
-        onView(withId(R.id.result)).check(matches(withText("Security: 1/5")));
+        onView(withId(R.id.resultLabel)).check(matches(withText("Security: 1/5")));
+    }
+
+    @Test
+    public void verifyRule2(){
+        onView(withId(R.id.passwordInput)).perform(click());
+        onView(withId(R.id.passwordInput)).perform(typeText(passes2));
+        onView(withId(R.id.submitButton)).perform((click()));
+        onView(withId(R.id.resultLabel)).check(matches(withText("Security: 2/5")));
+    }
+
+    @Test
+    public void verifyRule3(){
+        onView(withId(R.id.passwordInput)).perform(click());
+        onView(withId(R.id.passwordInput)).perform(typeText(passes3));
+        onView(withId(R.id.submitButton)).perform((click()));
+        onView(withId(R.id.resultLabel)).check(matches(withText("Security: 3/5")));
+    }
+
+    @Test
+    public void verifyRule4(){
+        onView(withId(R.id.passwordInput)).perform(click());
+        onView(withId(R.id.passwordInput)).perform(typeText(passes4));
+        onView(withId(R.id.submitButton)).perform((click()));
+        onView(withId(R.id.resultLabel)).check(matches(withText("Security: 4/5")));
+    }
+
+    @Test
+    public void verifyRule5(){
+        onView(withId(R.id.passwordInput)).perform(click());
+        onView(withId(R.id.passwordInput)).perform(typeText(passes5));
+        onView(withId(R.id.submitButton)).perform((click()));
+        onView(withId(R.id.resultLabel)).check(matches(withText("Security: 5/5")));
     }
 }
 
