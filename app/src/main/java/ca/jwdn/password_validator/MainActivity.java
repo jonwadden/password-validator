@@ -1,3 +1,13 @@
+/**
+ * CSCI 3130 - Assignment 2
+ *
+ * File:            MainActivity.java
+ * Description:     Defines the behaviour of the app's main activity
+ *
+ * Author:          Jon Wadden, B00713127
+ * Date:            June 9, 2018
+ */
+
 package ca.jwdn.password_validator;
 
 import android.support.v7.app.AppCompatActivity;

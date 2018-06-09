@@ -1,3 +1,13 @@
+/**
+ * CSCI 3130 - Assignment 2
+ *
+ * File:            Validator.java
+ * Description:     Validates security level of passwords
+ *
+ * Author:          Jon Wadden, B00713127
+ * Date:            June 9, 2018
+ */
+
 package ca.jwdn.password_validator;
 
 public class Validator {
