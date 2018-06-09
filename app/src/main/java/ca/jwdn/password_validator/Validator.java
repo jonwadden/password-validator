@@ -25,6 +25,21 @@ public class Validator {
         if (pw.length() >= 8){
             testsPassed++;
         }
+
+        // Test 3: Contains at least 1 capital and 1 lowercase letter
+        if (pw.matches(".*[a-z][a-z]*.*") && pw.matches(".*[A-Z][A-Z]*.*")){
+            testsPassed++;
+        }
+
+        // Test 4: Password contains at least 1 number
+        if (pw.matches(".*[0-9][0-9]*.*")){
+            testsPassed++;
+        }
+
+        // Test 5: Password contains at least 1 non-alphanumeric character
+        if (pw.matches(".*[^A-Za-z0-9][^A-Za-z0-9]*.*")){
+            testsPassed++;
+        }
         
         return testsPassed;
     }
