@@ -34,12 +34,13 @@ public class UITest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<>(MainActivity.class);
-    
+
 
     @Test
     public void verifyRule1(){
         onView(withId(R.id.passwordInput)).perform(click());
         onView(withId(R.id.passwordInput)).perform(typeText(passes1));
+        onView(withId(R.id.submitButton)).perform((click()));
         onView(withId(R.id.result)).check(matches(withText("Security: 1/5")));
     }
 }
